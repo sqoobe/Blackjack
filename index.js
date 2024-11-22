@@ -5,6 +5,7 @@ let hasBlackJack = false
 let isAlive = true
 let message = ""
 let messageEl = document.querySelector("#message-el")
+let sumEl = document.querySelector("sum-el")
 
 
 function startGame() {
