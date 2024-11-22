@@ -42,8 +42,9 @@ else{
 */
 
 // --------------CHALLENGE #3
+/*
 let firstCard = 10
-let secondCard = 7
+let secondCard = 11
 let sum = firstCard + secondCard
 
 // Write the conditional according to these rules:
@@ -62,3 +63,67 @@ else if (sum === 21){
 else {
     console.log("You're out of the game! 😭")
 }
+
+*/
+
+// --------------CHALLENGE #3
+
+/*
+let firstCard = 10
+let secondCard = 11
+let sum = firstCard + secondCard
+let hasBlackJack = false
+// 1. Create a variable called isAlive and assign it to true
+let isAlive = true
+// 2. Flip its value to false in the appropriate code block 
+if (sum <= 20) {
+    console.log("Do you want to draw a new card? 🙂")
+} else if (sum === 21) {
+    console.log("Wohoo! You've got Blackjack! 🥳")
+    hasBlackJack = true
+} else {
+    console.log("You're out of the game! 😭")
+    isAlive = false
+}
+
+// 3. Log it out to check that you're doing it right
+
+console.log(isAlive)
+*/
+
+// --------------CHALLENGE #4
+/*
+console.log(4 === 3)  // false
+console.log(5 > 2)    // true
+console.log(12 > 12)  // false
+console.log(3 < 0)    // false
+console.log(3 >= 3)   // true
+console.log(11 <= 11) // true
+console.log(3 <= 2)   // false
+*/
+// --------------CHALLENGE #5
+
+let firstCard = 10
+let secondCard = 11
+let sum = firstCard + secondCard
+let hasBlackJack = false
+let isAlive = true
+// 1. Declare a variable called message and assign its value to an empty string
+let message = ""
+
+// 2. Reassign the message variable to the string we're logging out
+if (sum <= 20) {
+    message = "Do you want to draw a new card? 🙂"
+} else if (sum === 21) {
+    message = "Wohoo! You've got Blackjack! 🥳"
+    hasBlackJack = true
+} else {
+    message = "You're out of the game! 😭"
+    isAlive = false
+}
+
+// 3. Log it out!
+console.log(message)
+
+
+
