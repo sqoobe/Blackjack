@@ -1,9 +1,7 @@
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let cards = [firstCard, secondCard] // array - ordered list of items
-let sum = firstCard + secondCard
+let cards = [] // array - ordered list of items
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 let messageEl = document.querySelector("#message-el")
 let sumEl = document.querySelector("#sum-el")
@@ -11,11 +9,23 @@ let cardsEl = document.querySelector("#cards-el")
 
 
 function getRandomCard(){
-    return 5
+    let randomNumber = Math.floor(Math.random()*13) + 1 // 1-13 RNG
+    if (randomNumber > 10) {
+        return 10
+    } else if (randomNumber === 1){
+        return 11
+    } else {
+        return randomNumber
+    }
 }
 
 // start gamba 
 function startGame(){
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
     renderGame()
 }
 // render gamba
